@@ -1,9 +1,11 @@
 Package.describe({
   summary: "Login service for Salesforce accounts",
-  internal: true
+  version: "0.0.3",
+  git: "https://github.com/jasonparekh/meteor-salesforce"
 });
 
-Package.on_use(function(api) {
+Package.onUse(function(api) {
+  api.versionsFrom('METEOR@0.9.3.1');
   api.use('oauth', ['client', 'server']);
   api.use('http', ['client', 'server']);
   api.use('service-configuration', ['client', 'server']);
